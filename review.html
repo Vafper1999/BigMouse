@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>รีวิวจากทางร้าน - Big Mouse Farm</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+        }
+
+        .mySlides {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="logo.png" alt="Big Mouse Farm"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Mice</a></li>
+                <li><a href="review.html">Reviews</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="reviews-section">
+        <h1>รีวิวจากทางร้าน</h1>
+
+        <div class="slideshow-container">
+            <div class="mySlides">
+                <div class="fb-post" data-href="https://www.facebook.com/share/p/3U1MzV85C1nH2yTt/" data-width=""></div>
+            </div>
+
+            <div class="mySlides">
+                <div class="fb-post" data-href="https://www.facebook.com/permalink.php?story_fbid=pfbid0G6BsJt8Z5F2Ns68XTorwSWghwe2SnwrEiyCM2TgADKxwBKEZqpFb3JcpDR6sxpKql&id=100089932073286" data-width=""></div>
+            </div>
+
+            <div class="mySlides">
+                <div class="fb-post" data-href="https://www.facebook.com/permalink.php?story_fbid=pfbid0LSaAyFKiY2oQtT2Az6RAGB467dHDdgLgkAVaE1bv96bSUy4NoJRkJXjTfTJKvvtrl&id=100089932073286" data-width=""></div>
+            </div>
+            
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="contact-info">
+            <p>ติดต่อ สั่งซื้อ</p>
+            <div class="contact-icons">
+                <a href="https://www.facebook.com/profile.php?id=100089932073286" target="_blank" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://lin.ee/xxwJU49" target="_blank" aria-label="Line">
+                    <i class="fab fa-line"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v12.0" nonce="your-nonce"></script>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            slides[slideIndex-1].style.display = "block";  
+            setTimeout(showSlides, 8000); // เปลี่ยนภาพทุกๆ 5 วินาที
+        }
+    </script>
+    
+</body>
+</html>
