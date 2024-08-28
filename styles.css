@@ -106,7 +106,7 @@ body {
 
 .option-group {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 2fr));
+    grid-template-columns: repeat(auto-fill, minmax(100px, 3fr));
     gap: 10px;
     max-height: 150px;
     max-width: 350px;
@@ -121,6 +121,7 @@ body {
     font-size: 16px;
     transition: background-color 1s, border-color 1s;
     border-color: #dcdcdc;
+    margin-bottom: auto;
 }
 
 .option-btn:hover {
